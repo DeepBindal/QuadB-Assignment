@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar";
 
 function App() {
   const theme = useSelector((state) => state.auth.theme);
-  const isAutenticated = useSelector((state) => state.auth.isAutenticated);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const sidebar = useSelector((state) => state.auth.sidebar);
 
   return (
@@ -18,7 +18,7 @@ function App() {
           theme === "dark" ? "bg-dark text-white" : "bg-light text-black"
         }`}
       >
-        {isAutenticated && sidebar && (
+        {(isAuthenticated && sidebar) && (
           <div className="w-64 transition-all duration-300">
             <Sidebar />
           </div>
