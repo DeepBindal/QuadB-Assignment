@@ -21,7 +21,7 @@ const Navbar = () => {
         <img src="./logo.svg" alt="" />
       </div>
       <div className="sidebar flex items-center gap-4">
-        <button onClick={() => dispatch(logout())}>Logout</button>
+        <button className="cursor-pointer" onClick={() => dispatch(logout())}>Logout</button>
         <IoSearch className="text-2xl cursor-pointer" />
         <LuLayoutGrid className="text-2xl cursor-pointer" />
         {theme === "light" ? (
